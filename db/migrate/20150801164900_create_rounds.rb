@@ -9,9 +9,8 @@ class CreateRounds < ActiveRecord::Migration
       x.belongs_to  :deck
       x.belongs_to  :user
 
-      x.string  :question , null: false
 
-      x.timestamps
+      x.timestamps null: false
 
     end
   end

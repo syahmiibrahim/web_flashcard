@@ -5,7 +5,8 @@ class CreateDecks < ActiveRecord::Migration
     create_table  :decks do |x|
       #a deck has many cards
       x.string  :subject , null: false
-      x.timestamps
+      x.timestamps null: false
+
 
     end
   end

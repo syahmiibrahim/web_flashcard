@@ -1,0 +1,22 @@
+
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <form name="login" action="/login" method ="POST">
+    <label for="username">Username: </label>
+    <input type="text" name="user[username]" id="username"><br>
+    <label for="password">Password: </label>
+    <input type="password" name="user[password]" id="password"><br>
+    <input type="submit" action="/login" value="Login"><br>
+  </form>
+
+  <% if params[:error] %>
+    <b> <%= params[:error] %>
+  <% end %>
+
+
+</body>
+</html>

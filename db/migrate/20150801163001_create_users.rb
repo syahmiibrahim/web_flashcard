@@ -9,8 +9,7 @@ class CreateUsers < ActiveRecord::Migration
       x.string  :name , null: false
       x.string  :username, null: false
       x.string  :password, null: false
-      x.timestamps
-
+      x.timestamps null: false
 
 
 

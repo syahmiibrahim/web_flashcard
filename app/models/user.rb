@@ -1,17 +1,18 @@
 
 
+class User < ActiveRecord::Base
 
+  has_many :decks, through: :round
 
-class Post < ActiveRecord::Base
+  def self.authenticate(username, password)
 
-  has_many :tags, through: :pairs
-  has_many :pairs
+    login = self.find_by(username: username)
 
-  validates :body, :presence => true
-  validates :title, :presence => true
+    unless login.nil?
+      login.password == password ? login : nil
+    end
 
-
-
+  end
 
 end
 

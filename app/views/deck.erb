@@ -1,0 +1,33 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <div>
+    <b>Select de deck you wanna play with...</b>
+      <form name="deck" action="/deck" method ="POST">
+
+        <% @deck.each do |x| %>
+          <input type="radio" name="deck_id" value="<%= x.id %>" checked><%= x.subject%><br>
+        <%end%>
+
+
+        <input type="submit" value="Start Round!"><br>
+      </form>
+
+
+
+  </div>
+
+
+
+
+
+
+
+  <form name="logout" action="/logout" method ="POST">
+    <input type="submit" name="logout_button" value="Log Out"><br>
+  </form>
+</body>
+</html>

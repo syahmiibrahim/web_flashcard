@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+  <div>
+    <b><%= @guess.card.question %></b>
+      <form name="guess" action="/round" method ="POST">
+
+        <% @options.each do |x| %>
+          <input type="radio" name="answers" value="<%= x %>" checked><%= x %><br>
+        <%end%>
+
+
+        <input type="submit" value="Submit Answer!"><br>
+      </form>
+
+
+
+  </div>
+
+</body>
+</html>
